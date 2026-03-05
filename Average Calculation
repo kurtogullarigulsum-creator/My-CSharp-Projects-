@@ -1,0 +1,19 @@
+
+Console.WriteLine("BİR SAYI GİRİNİZ: ");
+double sayi = Convert.ToDouble(Console.ReadLine());
+double toplam = 0;
+for (int i = 0; i < sayi; i++) 
+{
+    toplam += i;
+}
+double ortalama = (toplam / sayi);
+if (ortalama > 50)
+{
+    Console.WriteLine("ORTALAMANIZ 50'DEN BÜYÜKTÜR"+ "ORTALAMANIZ: " + ortalama);
+    Console.ReadLine();
+}
+else
+{
+    Console.WriteLine("ORTALAMANIZ 50'DEN KÜÇÜKTÜR."+ "ORTALAMANIZ: " + ortalama);
+    Console.ReadLine();
+}
