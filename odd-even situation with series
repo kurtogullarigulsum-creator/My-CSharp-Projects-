@@ -1,0 +1,46 @@
+int[] sayilar = new int[10];
+int tekToplam = 0;
+int ciftToplam = 0;
+int ciftAdet = 0;
+int tekAdet = 0;
+
+for (int i = 0; i < sayilar.Length; i++)
+
+{
+    Console.WriteLine("SAYILAR DİZİSİNİN " + (i + 0) + "İNDEX DEĞERİNİ GİRİNİZ: ");
+    sayilar[i] = Convert.ToInt32(Console.ReadLine());
+}
+foreach (int c in sayilar)
+{
+    if ((c % 2) == 0)
+    {
+        ciftToplam += c;
+        ciftAdet++;
+    }
+    else if ((c % 2) != 0)
+    {
+        tekToplam += c;
+        tekAdet++;
+    }
+}
+Console.WriteLine("Tek sayıların adedi : " + tekAdet);
+Console.WriteLine("Çift sayıların adedi :" + ciftAdet);
+
+Console.WriteLine("Tek sayıların toplamı= " + tekToplam);
+Console.WriteLine("Çift sayıların toplamı= " + ciftToplam);
+
+if (tekToplam > ciftToplam)
+{
+    Console.WriteLine("TEK SAYILARIN TOPLAMI DAHA BÜYÜKTÜR.");
+}
+else if (ciftToplam > tekToplam)
+{
+    Console.WriteLine("ÇİFT SAYILARIN TOPLAMI DAHA BÜYÜKTÜR. ");
+}
+else
+{
+    Console.WriteLine("TEK ÇİFT SAYILARIN TOPLAMI EŞİTTİR.");
+}
+
+
+
